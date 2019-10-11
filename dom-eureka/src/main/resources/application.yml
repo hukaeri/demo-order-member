@@ -8,4 +8,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://dom-eureka:8888/eureka/

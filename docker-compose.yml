@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  dom-eureka:
+    image: dom-eureka
+    ports:
+      - "8888:8888"
+    networks:
+      - cloud
+    #container_name:
+
+  dom-member:
+    image: dom-member
+    ports:
+      - "8890:8890"
+    networks:
+      - cloud
+    depends_on:
+      - dom-eureka
+
+  dom-order:
+    image: dom-order
+    ports:
+      - "8889:8889"
+    networks:
+      - cloud
+    depends_on:
+      - dom-eureka
+
+  dom-zuul:
+    image: dom-zuul
+    ports:
+      - "8891:8891"
+    networks:
+      - cloud
+    depends_on:
+      - dom-eureka
+
+networks:
+  cloud:
+    driver: bridge

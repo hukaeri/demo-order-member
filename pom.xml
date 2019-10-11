@@ -37,6 +37,9 @@
 
     <modules>
         <module>dom-eureka</module>
+        <module>dom-member</module>
+        <module>dom-order</module>
+        <module>dom-zuul</module>
     </modules>
 
 

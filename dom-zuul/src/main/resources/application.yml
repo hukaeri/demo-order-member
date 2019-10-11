@@ -2,10 +2,10 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8888/eureka/
+      defaultZone: http://dom-eureka:8888/eureka/
 #配置网关端口号
 server:
-  port: 8080
+  port: 8891
 spring:
   application:
     name: zuul-server
